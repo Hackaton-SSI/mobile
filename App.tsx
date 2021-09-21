@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar, Text } from 'react-native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+
+import AppStack from './src/routes/routes'
+import { LinearGradient } from 'expo-linear-gradient';
+import styled from 'styled-components/native';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Background
+        colors={['#8965D6', '#AE72D7', '#B666C2']}
+    >
+      <StatusBar backgroundColor="transparent" translucent barStyle="dark-content" />
+        
+      <AppStack />
+      <Text>App</Text>
+    </Background>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Background = styled(LinearGradient)`
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`
