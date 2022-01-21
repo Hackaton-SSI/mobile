@@ -1,17 +1,17 @@
-import styled from 'styled-components/native'
+import { StyleSheet } from "react-native";
 
-export const Container = styled.View` 
-  height: 70%;
-  width: 70%;
-  background-color: white;
-`
-export const InstitutionName = styled.Text`` 
+const styles = StyleSheet.create({
+  container: {
+    width: 220,
+    height: 270,
+    backgroundColor: '#fff',
+    borderRadius:25
+  },
 
-export const ActionName = styled.Text`` 
+  image: {
+    width: 100,
+    height: 100
+  }
+})
 
-export const ActionAddres = styled.Text`` 
-
-export const InstitutionImage = styled.Image`
-  height: 50%;
-  width: 100%;
-` 
+export default styles

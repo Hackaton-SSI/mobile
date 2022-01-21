@@ -1,22 +1,20 @@
 import React from 'react';
+import { Image, Text, View } from 'react-native';
 
-import { 
-  ActionAddres, 
-  ActionName, 
-  Container, 
-  InstitutionImage, 
-  InstitutionName
-} from './styles'
+import styles from './styles'
 
-export default function ActionCard() {
+import image from '../../../assets/image.jpg'
+const ActionCard: React.FC = () => {
+
   return (
-    <Container>
-        <InstitutionImage 
-          source={{uri: 'https://picsum.photos/200'}}
-        />
-        <InstitutionName>Nome da Instituição</InstitutionName>
-        <ActionName>Nome da Ação</ActionName>
-        <ActionAddres>Endereço da Ação</ActionAddres>
-    </Container>
+    <View style={styles.container}>
+      <Image 
+        source={image}
+        style={styles.image}
+      />
+      <Text>Action </Text>
+    </View>
   )
 }
+
+export default ActionCard;
